@@ -441,3 +441,377 @@ h3 {
     transition: none;
   }
 }
+
+/* Nkoma trade-dossier homepage */
+.trade-home {
+  background: #d9d2c2;
+  color: #171b15;
+}
+.trade-header {
+  height: 94px;
+  padding: 0 3vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #d9d2c2;
+  border-bottom: 1px solid #171b15;
+  position: relative;
+  z-index: 20;
+}
+.trade-brand {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  text-decoration: none;
+}
+.trade-brand span {
+  font: 400 2rem/1 var(--serif);
+  letter-spacing: 0.05em;
+}
+.trade-brand small {
+  font: 500 0.58rem/1.35 var(--sans);
+  letter-spacing: 0.1em;
+}
+.trade-header nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.trade-header nav a {
+  text-decoration: none;
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+.trade-contact {
+  border: 1px solid #171b15;
+  padding: 0.8rem 1rem;
+}
+.trade-menu {
+  display: none;
+  border: 1px solid #171b15;
+  background: none;
+  padding: 0.6rem 0.8rem;
+}
+.trade-hero {
+  min-height: calc(100vh - 94px);
+  display: grid;
+  grid-template-columns: 58% 42%;
+  position: relative;
+  border-bottom: 1px solid #171b15;
+}
+.trade-hero-photo {
+  background: url("../images/steptodown.com236864.jpg") center/cover;
+  filter: saturate(0.82) contrast(1.06);
+}
+.trade-hero-copy {
+  background: #a9472e;
+  color: #f3eee2;
+  padding: 6vw 5vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.trade-index {
+  font: 600 0.58rem/1.5 var(--sans);
+  letter-spacing: 0.16em;
+}
+.trade-hero h1 {
+  font-size: clamp(5rem, 9vw, 10rem);
+  line-height: 0.73;
+  margin: 3rem 0 2.5rem;
+}
+.trade-hero h1 em,
+.trade-statement h2 em {
+  font-weight: 400;
+}
+.trade-hero-copy > p:nth-of-type(2) {
+  max-width: 450px;
+  font-size: 1rem;
+}
+.trade-hero-copy > a {
+  margin-top: 2.5rem;
+  padding: 1rem 0;
+  border-top: 1px solid #f3eee2;
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.75rem;
+}
+.trade-vertical {
+  position: absolute;
+  left: 1.1rem;
+  bottom: 1.5rem;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  color: #fff;
+  font-size: 0.5rem;
+  letter-spacing: 0.15em;
+}
+.trade-spec {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-bottom: 1px solid #171b15;
+}
+.trade-spec div {
+  padding: 2rem 3vw;
+  border-right: 1px solid #171b15;
+}
+.trade-spec small {
+  display: block;
+  font-size: 0.55rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+}
+.trade-spec strong {
+  display: block;
+  margin-top: 0.5rem;
+  font: 400 1.35rem var(--serif);
+}
+.trade-statement {
+  display: grid;
+  grid-template-columns: 26% 74%;
+  padding: 10vw 6vw;
+  background: #e8e1d3;
+  border-bottom: 1px solid #171b15;
+}
+.trade-statement h2 {
+  font-size: clamp(3.8rem, 7vw, 8rem);
+  max-width: 1100px;
+}
+.trade-statement > div > p {
+  max-width: 650px;
+  margin-left: 30%;
+  font-size: 1.05rem;
+}
+.trade-line-link {
+  display: inline-block;
+  border-bottom: 1px solid;
+  padding: 0.7rem 0;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.72rem;
+  margin-left: 30%;
+}
+.trade-image-break {
+  position: relative;
+  height: 78vh;
+  background: #171b15;
+}
+.trade-image-break img {
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(0.72) contrast(1.08);
+}
+.trade-image-break div {
+  position: absolute;
+  bottom: 2rem;
+  left: 3vw;
+  background: #d9d2c2;
+  padding: 1rem 1.4rem;
+  min-width: 240px;
+}
+.trade-image-break span {
+  font-size: 0.55rem;
+  letter-spacing: 0.16em;
+}
+.trade-image-break p {
+  font: 400 1.4rem var(--serif);
+  margin: 0.2rem 0;
+}
+.trade-origins {
+  display: grid;
+  grid-template-columns: 42% 58%;
+  padding: 9vw 6vw;
+  background: #27351f;
+  color: #eee9dd;
+}
+.trade-origin-head h2 {
+  font-size: clamp(3rem, 5vw, 6rem);
+}
+.trade-origin-list {
+  border-top: 1px solid #a7ad9f;
+}
+.trade-origin-list a {
+  display: grid;
+  grid-template-columns: 45px 1fr 1fr 30px;
+  gap: 1rem;
+  padding: 1.4rem 0;
+  border-bottom: 1px solid #a7ad9f;
+  align-items: center;
+  text-decoration: none;
+}
+.trade-origin-list span,
+.trade-origin-list small {
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+}
+.trade-origin-list strong {
+  font: 400 1.8rem var(--serif);
+}
+.trade-process {
+  display: grid;
+  grid-template-columns: 48% 52%;
+  background: #e8e1d3;
+}
+.trade-process-photo img {
+  height: 100%;
+  object-fit: cover;
+}
+.trade-process-copy {
+  padding: 8vw 6vw;
+}
+.trade-process-copy h2 {
+  font-size: clamp(3.5rem, 6vw, 7rem);
+}
+.trade-process ol {
+  list-style: none;
+  padding: 0;
+  border-top: 1px solid;
+  margin: 2rem 0;
+}
+.trade-process li {
+  display: grid;
+  grid-template-columns: 45px 1fr;
+  padding: 1.2rem 0;
+  border-bottom: 1px solid;
+}
+.trade-process li span {
+  font-size: 0.6rem;
+}
+.trade-process li strong {
+  font: 400 1.6rem var(--serif);
+}
+.trade-process li p {
+  margin: 0.2rem 0;
+  color: #5a5f54;
+}
+.trade-process .trade-line-link {
+  margin-left: 0;
+}
+.trade-enquiry {
+  background: #a9472e;
+  color: #f3eee2;
+  padding: 9vw 6vw;
+  position: relative;
+}
+.trade-enquiry h2 {
+  font-size: clamp(5rem, 10vw, 11rem);
+  line-height: 0.76;
+}
+.trade-enquiry > p:nth-of-type(2) {
+  max-width: 520px;
+  margin-left: 50%;
+}
+.trade-enquiry > div {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid;
+  margin-top: 4rem;
+  padding-top: 1.2rem;
+}
+.trade-enquiry a {
+  color: inherit;
+  text-decoration: none;
+}
+.trade-footer {
+  background: #171b15;
+  color: #ddd6c8;
+  padding: 2rem 3vw;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.55rem;
+  letter-spacing: 0.14em;
+}
+@media (max-width: 800px) {
+  .trade-header {
+    height: 76px;
+  }
+  .trade-header nav {
+    display: none;
+  }
+  .trade-header nav.open {
+    display: flex;
+    position: absolute;
+    z-index: 20;
+    top: 76px;
+    left: 0;
+    right: 0;
+    padding: 1.5rem 1rem 2rem;
+    background: #ded7c8;
+    border-top: 1px solid #171b15;
+    border-bottom: 1px solid #171b15;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+  .trade-header nav.open a {
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(23, 27, 21, 0.35);
+  }
+  .trade-header nav.open .trade-contact {
+    margin-top: 0.75rem;
+    padding: 1rem;
+    text-align: center;
+    border: 1px solid #171b15;
+  }
+  .trade-menu {
+    display: block;
+  }
+  .trade-hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+  .trade-hero-photo {
+    height: 62vh;
+  }
+  .trade-hero-copy {
+    padding: 4rem 1rem;
+  }
+  .trade-hero h1 {
+    font-size: 5rem;
+  }
+  .trade-vertical {
+    display: none;
+  }
+  .trade-spec {
+    grid-template-columns: 1fr 1fr;
+  }
+  .trade-statement,
+  .trade-origins,
+  .trade-process {
+    grid-template-columns: 1fr;
+    padding: 5rem 1rem;
+  }
+  .trade-statement > div > p,
+  .trade-line-link {
+    margin-left: 0;
+  }
+  .trade-image-break {
+    height: 58vh;
+  }
+  .trade-origin-head {
+    margin-bottom: 2rem;
+  }
+  .trade-process-photo {
+    height: 65vh;
+    margin: -5rem -1rem 4rem;
+  }
+  .trade-enquiry {
+    padding: 5rem 1rem;
+  }
+  .trade-enquiry h2 {
+    font-size: 5rem;
+  }
+  .trade-enquiry > p:nth-of-type(2) {
+    margin-left: 0;
+  }
+  .trade-enquiry > div {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .trade-footer {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+}

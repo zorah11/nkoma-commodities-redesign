@@ -16,3 +16,17 @@ const io = new IntersectionObserver(
   { threshold: 0.08 },
 );
 document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+
+const tradeMenu = document.querySelector(".trade-menu");
+const tradeNavigation = document.querySelector("#trade-navigation");
+
+tradeMenu?.addEventListener("click", () => {
+  const isOpen = tradeMenu.getAttribute("aria-expanded") === "true";
+  tradeMenu.setAttribute("aria-expanded", String(!isOpen));
+  tradeMenu.setAttribute(
+    "aria-label",
+    isOpen ? "Open navigation" : "Close navigation",
+  );
+  tradeMenu.textContent = isOpen ? "Menu" : "Close";
+  tradeNavigation?.classList.toggle("open", !isOpen);
+});
