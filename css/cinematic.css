@@ -369,3 +369,52 @@
     display: none;
   }
 }
+
+/* Carry Nkoma's headed-paper palette through the photographic hero. */
+.cinematic-home .hero-photo::after {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(70, 22, 35, 0.9) 0%,
+      rgba(70, 22, 35, 0.58) 38%,
+      rgba(23, 20, 22, 0.08) 74%
+    ),
+    linear-gradient(0deg, rgba(50, 17, 25, 0.82), transparent 62%);
+}
+.cinematic-home .hero-copy h1 em {
+  color: #92c8ec;
+}
+.cinematic-home .kicker::before,
+.cinematic-home .site-nav a:not(.nav-button)::after {
+  background: var(--blue);
+}
+.cinematic-home .hero-rail {
+  background: var(--wine);
+  color: var(--cream);
+}
+.cinematic-home .hero-note {
+  background: rgba(74, 24, 38, 0.72);
+  border-color: rgba(146, 200, 236, 0.55);
+}
+.cinematic-home .hero-note span {
+  color: #92c8ec;
+}
+.cinematic-home .button-light {
+  background: var(--cream);
+  border-color: var(--cream);
+  color: var(--wine);
+}
+.cinematic-home .button-line {
+  border-color: rgba(255, 255, 255, 0.72);
+}
+@media (max-width: 900px) {
+  .cinematic-home .hero-photo::after {
+    background: linear-gradient(
+      180deg,
+      rgba(70, 22, 35, 0.18) 0%,
+      rgba(70, 22, 35, 0.2) 34%,
+      rgba(70, 22, 35, 0.9) 68%,
+      #321119 100%
+    );
+  }
+}
