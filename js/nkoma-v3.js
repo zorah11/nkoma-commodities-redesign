@@ -26,12 +26,21 @@ document
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 const photos = [...document.querySelectorAll("[data-parallax]")];
 const hero = document.querySelector(".hero-visual");
+const scenes = [...document.querySelectorAll(".photo-ribbon")].map((ribbon) => {
+  const scene = document.createElement("div");
+  scene.className = "photo-scroll-scene";
+  ribbon.before(scene);
+  scene.append(ribbon);
+  ribbon.classList.add("stack-ready");
+  return { scene, ribbon, figures: [...ribbon.querySelectorAll("figure")] };
+});
 let pending = false;
 function updateMotion() {
   pending = false;
   const enabled = !reducedMotion.matches;
   const mobile = window.innerWidth <= 900;
   photos.forEach((photo) => {
+    if (photo.parentElement.classList.contains("stack-ready")) return;
     const section = photo.parentElement.getBoundingClientRect();
     const offset = enabled
       ? Math.max(
@@ -46,6 +55,35 @@ function updateMotion() {
       : 0;
     photo.style.setProperty("--scroll-y", `${offset}px`);
     photo.style.setProperty("--scroll-rotate", `${offset * 0.025}deg`);
+  });
+  scenes.forEach(({ scene, ribbon, figures }) => {
+    const rect = scene.getBoundingClientRect();
+    const travel = Math.max(
+      1,
+      scene.offsetHeight - ribbon.offsetHeight - window.innerHeight * 0.12,
+    );
+    const raw = Math.max(
+      0,
+      Math.min(1, (window.innerHeight * 0.12 - rect.top) / travel),
+    );
+    const progress = reducedMotion.matches ? 1 : raw * raw * (3 - 2 * raw);
+    figures.forEach((figure, index) => {
+      const direction = index - 1;
+      const x =
+        direction * ribbon.clientWidth * (mobile ? 0.255 : 0.335) * progress;
+      const y = mobile
+        ? (index === 1 ? -24 : 30) * progress
+        : (index === 1 ? 28 : -8) * progress;
+      const rotation =
+        [-9, 3, 11][index] * (1 - progress) + [-4, 0, 4][index] * progress;
+      figure.style.setProperty("--fan-x", `${x}px`);
+      figure.style.setProperty("--fan-y", `${y}px`);
+      figure.style.setProperty("--fan-angle", `${rotation}deg`);
+      figure.style.setProperty(
+        "--fan-scale",
+        `${1 - progress * (mobile ? 0.15 : 0.02)}`,
+      );
+    });
   });
   if (hero) {
     const bounds = hero.getBoundingClientRect();
@@ -210,6 +248,6 @@ const entranceObserver = new IntersectionObserver(
   },
   { threshold: 0.12 },
 );
-document
-  .querySelectorAll(".photo-ribbon")
-  .forEach((el) => entranceObserver.observe(el));
+document.querySelectorAll(".photo-ribbon").forEach((el) => {
+  if (!el.classList.contains("stack-ready")) entranceObserver.observe(el);
+});
