@@ -1378,3 +1378,239 @@ button:focus-visible,
   color: white;
   background: #26351f;
 }
+
+/* Glass accents for the inner pages, grounded in Nkoma's coffee palette. */
+.inner-page .site-header {
+  position: sticky;
+  top: 0;
+  background: rgba(251, 248, 241, 0.88);
+  -webkit-backdrop-filter: blur(18px) saturate(125%);
+  backdrop-filter: blur(18px) saturate(125%);
+}
+.inner-page .page-intro {
+  position: relative;
+  background:
+    radial-gradient(
+      circle at 85% 15%,
+      rgba(55, 161, 137, 0.1),
+      transparent 25%
+    ),
+    linear-gradient(135deg, #f7f0e3, var(--cream));
+}
+.inner-page .page-intro::after {
+  content: "";
+  position: absolute;
+  width: clamp(140px, 20vw, 300px);
+  aspect-ratio: 1;
+  right: 3vw;
+  bottom: -42%;
+  background: url("../images/steptodown.com586721-removebg-preview.png")
+    center/contain no-repeat;
+  opacity: 0.09;
+  transform: rotate(-12deg);
+  pointer-events: none;
+}
+.inner-page .page-intro-grid {
+  position: relative;
+  z-index: 1;
+}
+.inner-page .page-intro h1 {
+  color: #173e33;
+}
+.page-image {
+  position: relative;
+  isolation: isolate;
+}
+.page-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(90deg, rgba(8, 25, 17, 0.12), transparent 60%);
+  pointer-events: none;
+}
+.page-image img {
+  transition: transform 1.2s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.page-image:hover img {
+  transform: scale(1.025);
+}
+.page-image-glass {
+  position: absolute;
+  z-index: 2;
+  left: clamp(1rem, 6vw, 6rem);
+  bottom: clamp(1rem, 6vw, 5rem);
+  width: min(390px, calc(100% - 2rem));
+  padding: clamp(1.35rem, 2.5vw, 2rem);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.38);
+  background: linear-gradient(
+    135deg,
+    rgba(12, 43, 31, 0.72),
+    rgba(20, 24, 16, 0.46)
+  );
+  -webkit-backdrop-filter: blur(15px) saturate(130%);
+  backdrop-filter: blur(15px) saturate(130%);
+  box-shadow: 0 24px 60px rgba(5, 19, 12, 0.24);
+}
+.page-image-glass span {
+  display: block;
+  margin-bottom: 0.7rem;
+  color: #b7eadb;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+.page-image-glass strong {
+  display: block;
+  font: 400 clamp(1.45rem, 2.4vw, 2.2rem)/1.08 var(--serif);
+}
+.values {
+  position: relative;
+  background:
+    linear-gradient(rgba(11, 48, 36, 0.91), rgba(11, 48, 36, 0.96)),
+    url("../images/steptodown.com435624-1.jpg") center/cover fixed;
+}
+.values .value-grid {
+  gap: 1rem;
+  border: 0;
+}
+.values .value {
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  border: 1px solid rgba(255, 255, 255, 0.19);
+  background: rgba(255, 255, 255, 0.075);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  transition:
+    background 0.3s,
+    transform 0.3s;
+}
+.values .value:nth-child(even) {
+  padding-left: clamp(1.5rem, 3vw, 2.5rem);
+}
+.values .value:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-4px);
+}
+.values .value b,
+.values .section-tag {
+  color: #b7eadb !important;
+}
+.values .value p {
+  color: rgba(255, 255, 255, 0.76);
+}
+.process-page .content-section {
+  background: linear-gradient(135deg, #ede4d3, #f7f1e6);
+}
+.process-page .service-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  border: 0;
+}
+.process-page .service {
+  display: grid;
+  grid-template-columns: 42px 1fr;
+  align-content: start;
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  border: 1px solid rgba(23, 62, 51, 0.16);
+  background: rgba(255, 255, 255, 0.5);
+  -webkit-backdrop-filter: blur(13px);
+  backdrop-filter: blur(13px);
+  box-shadow: 0 18px 45px rgba(52, 36, 22, 0.07);
+}
+.process-page .service h3 {
+  color: #173e33;
+}
+.process-page .service p {
+  grid-column: 2;
+}
+.process-page .service span {
+  color: var(--green);
+}
+.contact-page .content-section {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(
+      110deg,
+      rgba(243, 235, 218, 0.95),
+      rgba(243, 235, 218, 0.78)
+    ),
+    url("../images/steptodown.com918472.jpg") center/cover;
+}
+.contact-page .contact-list {
+  display: grid;
+  gap: 0.7rem;
+  border: 0;
+}
+.contact-page .contact-list a,
+.contact-page .contact-list div {
+  padding: 1.25rem 1.4rem;
+  border: 1px solid rgba(23, 62, 51, 0.17);
+  background: rgba(255, 255, 255, 0.46);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  transition:
+    background 0.25s,
+    transform 0.25s;
+}
+.contact-page .contact-list a:hover {
+  background: rgba(255, 255, 255, 0.72);
+  transform: translateX(5px);
+}
+.inner-page .section-tag {
+  color: #315f50;
+}
+.inner-page .journey {
+  background: #143f33;
+}
+.inner-page .journey-copy {
+  background:
+    radial-gradient(
+      circle at 90% 10%,
+      rgba(83, 167, 137, 0.22),
+      transparent 32%
+    ),
+    #143f33;
+}
+.inner-page .journey-list span {
+  color: #a9ddcd;
+}
+.process-page .contact-band {
+  color: white;
+  background:
+    linear-gradient(115deg, rgba(13, 55, 42, 0.94), rgba(16, 43, 34, 0.9)),
+    url("../images/steptodown.com578983.jpg") center / cover;
+}
+.process-page .contact-band-grid > div {
+  padding: 1.6rem;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.08);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+}
+.process-page .contact-band .button {
+  color: #173e33;
+  background: var(--paper);
+}
+@media (max-width: 720px) {
+  .page-image {
+    height: 62vh;
+  }
+  .page-image-glass {
+    right: 1rem;
+    left: 1rem;
+    width: auto;
+  }
+  .process-page .service-list {
+    grid-template-columns: 1fr;
+  }
+  .process-page .service {
+    grid-template-columns: 34px 1fr;
+  }
+  .values {
+    background-attachment: scroll;
+  }
+}
