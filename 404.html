@@ -3,15 +3,32 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#1c0f0d" />
     <title>Page Not Found | Nkoma Commodities</title>
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="icon" href="images/nkoma-logo.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="css/nkoma-v3.css" />
   </head>
   <body>
-    <main class="section">
-      <div class="wrap">
-        <p class="eyebrow">404</p>
-        <h1>That page has moved.</h1>
-        <a class="btn btn-dark" href="index.html">Return home</a>
+    <header class="site-header">
+      <a class="site-logo" href="index.html"
+        ><img src="images/nkoma-logo.svg" alt="Nkoma Commodities Ltd"
+      /></a>
+    </header>
+    <main class="home-hero" style="min-height: calc(100vh - 92px)">
+      <div class="hero-grid" style="grid-template-columns: 1fr">
+        <div class="hero-copy">
+          <p class="kicker">404 / page not found</p>
+          <h1>This route<br />ends <em>here.</em></h1>
+          <p>
+            The page may have moved. Return to Nkoma Commodities and continue
+            from the homepage.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-light" href="index.html"
+              >Return home <span>↗</span></a
+            >
+          </div>
+        </div>
       </div>
     </main>
   </body>

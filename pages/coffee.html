@@ -5,106 +5,134 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta
       name="description"
-      content="Explore the Ugandan coffee origins and preparations presented by Nkoma Commodities."
+      content="Explore the Ugandan Arabica and Robusta coffee conversation at Nkoma Commodities."
     />
     <title>Our Coffee | Nkoma Commodities</title>
-    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="icon" href="../images/nkoma-logo.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../css/nkoma-v3.css" />
   </head>
   <body>
-    <header class="header">
-      <a class="brand" href="../index.html"
-        ><span class="seal">N</span><strong>Nkoma Commodities</strong></a
-      ><button class="menu" aria-label="Open navigation" aria-expanded="false">
-        <span></span><span></span><span></span>
+    <header class="site-header">
+      <a class="site-logo" href="../index.html"
+        ><img src="../images/nkoma-logo.svg" alt="Nkoma Commodities Ltd" /></a
+      ><button
+        class="menu-toggle"
+        type="button"
+        aria-controls="site-navigation"
+        aria-expanded="false"
+      >
+        Menu
       </button>
-      <nav class="nav">
-        <a href="../index.html">Home</a><a href="about.html">About</a
+      <nav class="site-nav" id="site-navigation">
+        <a href="../index.html">Home</a><a href="about.html">Company</a
         ><a aria-current="page" href="coffee.html">Our coffee</a
-        ><a href="export.html">Sourcing & export</a
-        ><a class="nav-cta" href="contact.html">Trade enquiry</a>
+        ><a href="export.html">Trade process</a
+        ><a class="nav-button" href="contact.html">Start an enquiry ↗</a>
       </nav>
     </header>
     <main>
-      <section
-        class="page-hero"
-        style="
-          --page-image: url(&quot;../images/steptodown.com578983.jpg&quot;);
-        "
-      >
-        <div class="wrap">
-          <p class="eyebrow" style="color: #dfb596">Our coffee</p>
-          <h1>Arabica and Robusta from Uganda.</h1>
-        </div>
-      </section>
-      <section class="section">
-        <div class="wrap split">
+      <section class="page-intro">
+        <div class="wrap page-intro-grid reveal">
           <div>
-            <p class="eyebrow">Origins</p>
-            <h2>A country of distinct coffee landscapes.</h2>
+            <p class="section-tag">Our coffee</p>
+            <h1>Two species.<br />One remarkable origin.</h1>
           </div>
-          <p class="lead">
-            Nkoma’s current origin portfolio includes coffees associated with
-            western, southwestern and eastern Uganda.
+          <p>
+            Uganda grows both Arabica and Robusta. Nkoma begins with the buyer’s
+            requirement, then discusses origin, preparation and current
+            availability directly.
           </p>
         </div>
-        <div class="wrap origins">
-          <div class="origin"><span>West</span><strong>Rwenzori</strong></div>
-          <div class="origin">
-            <span>Southwest</span><strong>Kisoro</strong>
+      </section>
+      <div class="page-image">
+        <img
+          src="../images/steptodown.com435624-1.jpg"
+          alt="Ripe coffee cherries growing in Uganda"
+        />
+      </div>
+      <section class="content-section">
+        <div class="wrap content-split reveal">
+          <h2>Arabica &amp;<br />Robusta.</h2>
+          <div>
+            <p class="lead">
+              Coffee is not interchangeable. Species, origin and preparation
+              shape every useful sourcing conversation.
+            </p>
+            <div class="product-grid">
+              <article class="product">
+                <b>01 / SPECIES</b>
+                <h3>Arabica</h3>
+                <p>
+                  Discuss the origin, preparation, volume, destination and
+                  timing required for your enquiry.
+                </p>
+              </article>
+              <article class="product">
+                <b>02 / SPECIES</b>
+                <h3>Robusta</h3>
+                <p>
+                  Share the intended requirement so Nkoma can respond with
+                  relevant, current information.
+                </p>
+              </article>
+            </div>
           </div>
-          <div class="origin">
-            <span>Southwest</span><strong>Nyakishenyi</strong>
-          </div>
-          <div class="origin">
-            <span>East</span><strong>Mount Elgon</strong>
-          </div>
-          <div class="origin"><span>East</span><strong>Bugisu</strong></div>
         </div>
       </section>
-      <section class="section products">
-        <div class="wrap">
-          <h2>Current preparations</h2>
-          <div class="product-grid">
-            <article class="product">
-              <h3>Washed Arabica</h3>
-              <p>Ask about current origin, grade and availability.</p>
-            </article>
-            <article class="product">
-              <h3>Natural Arabica</h3>
-              <p>Discuss lot details directly with the trade team.</p>
-            </article>
-            <article class="product">
-              <h3>Washed Robusta</h3>
-              <p>Share the preparation and destination you require.</p>
-            </article>
-            <article class="product">
-              <h3>Natural Robusta</h3>
-              <p>Request current specifications and supply information.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-      <section class="section">
-        <div class="wrap gallery">
+      <section class="journey">
+        <div class="journey-media">
           <img
-            src="../images/steptodown.com435624-1.jpg"
-            alt="Coffee cherries growing at elevation"
-          /><img
-            src="../images/steptodown.com904727.jpg"
-            alt="Roasted coffee beans in jute sacks"
-          /><img
             src="../images/steptodown.com578983.jpg"
-            alt="Fresh red coffee cherries"
-          />
+            alt="Fresh coffee cherries held after harvest"
+          /><span class="journey-caption">Harvest / selection</span>
+        </div>
+        <div class="journey-copy reveal">
+          <p class="section-tag" style="color: #77c8b4">
+            Starting a requirement
+          </p>
+          <h2>Tell us what<br />you need.</h2>
+          <div class="journey-list">
+            <a href="contact.html"
+              ><span>01</span><strong>Species or coffee type</strong><b>↗</b></a
+            ><a href="contact.html"
+              ><span>02</span><strong>Preferred preparation</strong><b>↗</b></a
+            ><a href="contact.html"
+              ><span>03</span><strong>Expected quantity</strong><b>↗</b></a
+            ><a href="contact.html"
+              ><span>04</span><strong>Destination &amp; timing</strong
+              ><b>↗</b></a
+            >
+          </div>
         </div>
       </section>
     </main>
-    <footer class="footer">
+    <footer class="site-footer">
       <div class="wrap">
-        <h2>Ask about current coffee</h2>
-        <a href="contact.html">Start a trade enquiry</a>
+        <div class="footer-grid">
+          <div>
+            <img
+              class="footer-logo"
+              src="../images/nkoma-logo.svg"
+              alt="Nkoma Commodities Ltd"
+            />
+          </div>
+          <div>
+            <h3>Trade desk</h3>
+            <a href="mailto:trade@nkomacommodities.com"
+              >trade@nkomacommodities.com</a
+            ><a href="tel:+256703155920">+256 703 155 920</a>
+          </div>
+          <div>
+            <h3>Kampala office</h3>
+            <p>Plot 6, 3rd Street Industrial Area<br />Kampala, Uganda</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>Ugandan coffee • commodities • trade</span
+          ><span>© 2026 Nkoma Commodities Ltd</span>
+        </div>
       </div>
     </footer>
-    <script src="../js/main.js"></script>
+    <script src="../js/nkoma-v3.js"></script>
   </body>
 </html>

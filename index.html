@@ -5,170 +5,211 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta
       name="description"
-      content="Nkoma Commodities sources and coordinates the export of Ugandan Arabica and Robusta coffee."
+      content="Nkoma Commodities is a Kampala-based Ugandan commodities company supporting, promoting and exporting Ugandan coffee."
     />
-    <title>Nkoma Commodities | Uganda, At Origin</title>
-    <link rel="stylesheet" href="css/styles.css" />
+    <meta name="theme-color" content="#1c0f0d" />
+    <title>Nkoma Commodities | Ugandan Coffee, From Origin</title>
+    <link rel="icon" href="images/nkoma-logo.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="css/nkoma-v3.css" />
   </head>
-  <body class="trade-home">
-    <header class="trade-header">
-      <a class="trade-brand" href="index.html"
-        ><span>NKOMA</span
-        ><small>Commodities Ltd<br />Kampala, Uganda</small></a
-      >
-      <nav id="trade-navigation">
-        <a href="pages/about.html">Company</a><a href="#origins">Origins</a
-        ><a href="pages/export.html">Trade process</a
-        ><a class="trade-contact" href="pages/contact.html"
-          >Request a conversation ↗</a
-        >
-      </nav>
+  <body>
+    <header class="site-header">
+      <a class="site-logo" href="index.html" aria-label="Nkoma Commodities home"
+        ><img src="images/nkoma-logo.svg" alt="Nkoma Commodities Ltd"
+      /></a>
       <button
-        class="trade-menu"
+        class="menu-toggle"
         type="button"
-        aria-label="Open navigation"
-        aria-controls="trade-navigation"
+        aria-controls="site-navigation"
         aria-expanded="false"
       >
         Menu
       </button>
+      <nav
+        class="site-nav"
+        id="site-navigation"
+        aria-label="Primary navigation"
+      >
+        <a aria-current="page" href="index.html">Home</a
+        ><a href="pages/about.html">Company</a
+        ><a href="pages/coffee.html">Our coffee</a
+        ><a href="pages/export.html">Trade process</a
+        ><a class="nav-button" href="pages/contact.html">Start an enquiry ↗</a>
+      </nav>
     </header>
     <main>
-      <section class="trade-hero">
-        <div
-          class="trade-hero-photo"
-          role="img"
-          aria-label="Ugandan coffee farmer harvesting ripe coffee cherries"
-        ></div>
-        <div class="trade-hero-copy">
-          <p class="trade-index">UG / 01<br />GREEN COFFEE</p>
-          <h1>Uganda,<br /><em>at origin.</em></h1>
-          <p>
-            Arabica and Robusta sourced across Uganda’s coffee-growing regions,
-            prepared for clear export conversations.
-          </p>
-          <a href="pages/contact.html"
-            >Begin with your requirement <span>↗</span></a
+      <section class="home-hero">
+        <div class="hero-grid">
+          <div class="hero-copy reveal">
+            <p class="kicker">Ugandan agricultural commodities</p>
+            <h1>Coffee,<br />grown with <em>purpose.</em></h1>
+            <p>
+              From Uganda’s coffee-growing regions to conversations with buyers,
+              Nkoma brings origin, preparation and trade requirements into one
+              clear relationship.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-light" href="pages/coffee.html"
+                >Explore our coffee <span>↗</span></a
+              ><a class="button button-line" href="pages/contact.html"
+                >Speak with the trade desk</a
+              >
+            </div>
+          </div>
+          <div
+            class="hero-visual"
+            aria-label="Coffee farmer harvesting ripe coffee cherries"
           >
+            <div class="hero-photo"></div>
+            <div class="bean-field" aria-hidden="true">
+              <i class="bean one"></i><i class="bean two"></i
+              ><i class="bean three"></i><i class="bean four"></i>
+            </div>
+            <div class="origin-stamp">
+              <div><strong>Uganda</strong><span>GROWN AT ORIGIN</span></div>
+            </div>
+          </div>
         </div>
-        <p class="trade-vertical">
-          KAMPALA · EAST AFRICA · 0.3476° N, 32.5825° E
-        </p>
-      </section>
-      <section class="trade-spec">
-        <div><small>Commodity</small><strong>Green coffee</strong></div>
-        <div><small>Species</small><strong>Arabica / Robusta</strong></div>
-        <div><small>Preparation</small><strong>Washed / Natural</strong></div>
-        <div><small>Trade office</small><strong>Kampala, Uganda</strong></div>
-      </section>
-      <section class="trade-statement">
-        <p class="trade-index">THE COMPANY / 02</p>
-        <div>
-          <h2>Not a coffee-shop story.<br />A <em>trade relationship.</em></h2>
-          <p>
-            Nkoma Commodities is an agricultural commodities company focused on
-            supporting, promoting and exporting coffee grown and processed in
-            Uganda. The conversation starts with origin, preparation, volume,
-            destination and timing.
-          </p>
-          <a class="trade-line-link" href="pages/about.html"
-            >Company profile ↗</a
-          >
+        <div class="hero-rail" aria-hidden="true">
+          <div>
+            ARABICA&nbsp;&nbsp;•&nbsp;&nbsp;ROBUSTA&nbsp;&nbsp;•&nbsp;&nbsp;UGANDA&nbsp;&nbsp;•&nbsp;&nbsp;SOURCE&nbsp;&nbsp;•&nbsp;&nbsp;PREPARE&nbsp;&nbsp;•&nbsp;&nbsp;CONNECT&nbsp;&nbsp;•&nbsp;&nbsp;ARABICA&nbsp;&nbsp;•&nbsp;&nbsp;ROBUSTA&nbsp;&nbsp;•&nbsp;&nbsp;UGANDA&nbsp;&nbsp;•&nbsp;&nbsp;SOURCE&nbsp;&nbsp;•&nbsp;&nbsp;PREPARE&nbsp;&nbsp;•&nbsp;&nbsp;CONNECT&nbsp;&nbsp;•&nbsp;&nbsp;
+          </div>
         </div>
       </section>
-      <section class="trade-image-break">
-        <img
-          src="images/WhatsApp-Image-2025-05-23-at-14.27.21_df2f2b79.jpg"
-          alt="Coffee cherries laid out for drying in Uganda"
-        />
-        <div>
-          <span>POST-HARVEST</span>
-          <p>Drying coffee at origin</p>
+      <div class="brand-stripe" aria-hidden="true">
+        <i></i><i></i><i></i><i></i>
+      </div>
+
+      <section class="statement">
+        <div class="wrap statement-grid reveal">
+          <p class="section-tag">Nkoma / at a glance</p>
+          <div>
+            <h2>Ugandan origin.<br /><em>Commercial clarity.</em></h2>
+            <div class="statement-copy">
+              <p>
+                Nkoma Commodities Ltd supports, promotes and exports coffee
+                grown and processed in Uganda. We make it easier to begin the
+                right conversation about source, preparation, volume,
+                destination and timing.
+              </p>
+              <a class="text-link" href="pages/about.html"
+                >Meet Nkoma <span>↗</span></a
+              >
+            </div>
+          </div>
         </div>
       </section>
-      <section class="trade-origins" id="origins">
-        <div class="trade-origin-head">
-          <p class="trade-index">ORIGIN INDEX / 03</p>
-          <h2>Five starting points<br />across Uganda.</h2>
-        </div>
-        <div class="trade-origin-list">
-          <a href="pages/coffee.html"
-            ><span>01</span><strong>Rwenzori</strong
-            ><small>Western Uganda</small><b>↗</b></a
-          ><a href="pages/coffee.html"
-            ><span>02</span><strong>Kisoro</strong
-            ><small>Southwestern Uganda</small><b>↗</b></a
-          ><a href="pages/coffee.html"
-            ><span>03</span><strong>Nyakishenyi</strong
-            ><small>Southwestern Uganda</small><b>↗</b></a
-          ><a href="pages/coffee.html"
-            ><span>04</span><strong>Mount Elgon</strong
-            ><small>Eastern Uganda</small><b>↗</b></a
-          ><a href="pages/coffee.html"
-            ><span>05</span><strong>Bugisu</strong><small>Eastern Uganda</small
-            ><b>↗</b></a
-          >
-        </div>
-      </section>
-      <section class="trade-process">
-        <div class="trade-process-photo">
+
+      <section class="journey">
+        <div class="journey-media">
           <img
-            src="images/steptodown.com578983.jpg"
-            alt="Hands holding freshly harvested coffee cherries"
-          />
-        </div>
-        <div class="trade-process-copy">
-          <p class="trade-index">TRADE SEQUENCE / 04</p>
-          <h2>Requirements first.</h2>
-          <ol>
-            <li>
-              <span>01</span>
-              <div>
-                <strong>Define</strong>
-                <p>
-                  Origin, species, preparation, volume, destination and timing.
-                </p>
-              </div>
-            </li>
-            <li>
-              <span>02</span>
-              <div>
-                <strong>Source</strong>
-                <p>Discuss suitable coffee and current availability.</p>
-              </div>
-            </li>
-            <li>
-              <span>03</span>
-              <div>
-                <strong>Coordinate</strong>
-                <p>Align handling, documentation and shipment requirements.</p>
-              </div>
-            </li>
-          </ol>
-          <a class="trade-line-link" href="pages/export.html"
-            >View the trade process ↗</a
+            src="images/WhatsApp-Image-2025-05-23-at-14.27.20_2b39f6a4.jpg"
+            alt="Coffee drying at origin in Uganda"
+          /><span class="journey-caption"
+            >Coffee handling at origin / Uganda</span
           >
         </div>
+        <div class="journey-copy reveal">
+          <p class="section-tag" style="color: #77c8b4">
+            One crop. A complete conversation.
+          </p>
+          <h2>From red cherry<br />to green coffee.</h2>
+          <div class="journey-list">
+            <a href="pages/coffee.html"
+              ><span>01</span><strong>Coffee at origin</strong><b>↗</b></a
+            ><a href="pages/coffee.html"
+              ><span>02</span><strong>Arabica &amp; Robusta</strong><b>↗</b></a
+            ><a href="pages/export.html"
+              ><span>03</span><strong>Preparation &amp; handling</strong
+              ><b>↗</b></a
+            ><a href="pages/export.html"
+              ><span>04</span><strong>Trade coordination</strong><b>↗</b></a
+            >
+          </div>
+        </div>
       </section>
-      <section class="trade-enquiry">
-        <p class="trade-index">TRADE DESK / 05</p>
-        <h2>What are you<br />looking for?</h2>
-        <p>
-          Send the coffee type, preparation, quantity and destination. Nkoma
-          will respond with current information.
-        </p>
-        <div>
-          <a
-            href="mailto:trade@nkomacommodities.com?subject=Ugandan%20coffee%20trade%20enquiry"
-            >trade@nkomacommodities.com ↗</a
-          ><a href="tel:+256703155920">+256 703 155 920</a>
+
+      <section class="coffee-window">
+        <div class="wrap">
+          <div class="coffee-head reveal">
+            <div>
+              <p class="section-tag">The coffee window</p>
+              <h2 class="section-title">
+                See the journey,<br />not just the bean.
+              </h2>
+            </div>
+            <a class="text-link" href="pages/coffee.html"
+              >View coffee information <span>↗</span></a
+            >
+          </div>
+          <div class="photo-ribbon">
+            <figure class="reveal">
+              <img
+                src="images/steptodown.com435624-1.jpg"
+                alt="Ripe coffee cherries on a coffee plant"
+              />
+              <figcaption>Cherry / origin</figcaption>
+            </figure>
+            <figure class="reveal">
+              <img
+                src="images/steptodown.com578983.jpg"
+                alt="Freshly harvested coffee cherries held over a basket"
+              />
+              <figcaption>Harvest / selection</figcaption>
+            </figure>
+            <figure class="reveal">
+              <img
+                src="images/WhatsApp-Image-2025-05-23-at-14.27.21_df2f2b79.jpg"
+                alt="Coffee drying on raised surfaces"
+              />
+              <figcaption>Preparation / drying</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-band">
+        <div class="wrap contact-band-grid reveal">
+          <h2>Let’s talk<br />coffee.</h2>
+          <div>
+            <p>
+              Tell Nkoma what you are looking for: coffee type, preparation,
+              expected quantity, destination and timing.
+            </p>
+            <a class="button" href="pages/contact.html"
+              >Begin a trade enquiry <span>↗</span></a
+            >
+          </div>
         </div>
       </section>
     </main>
-    <footer class="trade-footer">
-      <span>NKOMA COMMODITIES LTD</span
-      ><span>KAMPALA · UGANDA · EAST AFRICA</span><span>© 2026</span>
+    <footer class="site-footer">
+      <div class="wrap">
+        <div class="footer-grid">
+          <div>
+            <img
+              class="footer-logo"
+              src="images/nkoma-logo.svg"
+              alt="Nkoma Commodities Ltd"
+            />
+          </div>
+          <div>
+            <h3>Trade desk</h3>
+            <a href="mailto:trade@nkomacommodities.com"
+              >trade@nkomacommodities.com</a
+            ><a href="tel:+256703155920">+256 703 155 920</a>
+          </div>
+          <div>
+            <h3>Kampala office</h3>
+            <p>Plot 6, 3rd Street Industrial Area<br />Kampala, Uganda</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>Ugandan coffee • commodities • trade</span
+          ><span>© 2026 Nkoma Commodities Ltd</span>
+        </div>
+      </div>
     </footer>
-    <script src="js/main.js"></script>
+    <script src="js/nkoma-v3.js"></script>
   </body>
 </html>
