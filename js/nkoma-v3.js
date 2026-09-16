@@ -113,21 +113,17 @@ document.addEventListener("keydown", (event) => {
   }
 });
 
-// Each origin remains a real link; manual interaction stops automatic advance.
+// Manual origin carousel: swipe, keyboard arrows or visible arrow buttons.
 document.querySelectorAll(".origin-track").forEach((track) => {
   const cards = [...track.querySelectorAll(".origin-card")];
   const controls = document.createElement("div");
   controls.className = "origin-controls";
   controls.innerHTML =
-    '<div class="origin-position" aria-live="off">01 / 05</div><div class="origin-buttons"><button type="button" class="origin-prev" aria-label="Previous coffee origin">←</button><button type="button" class="origin-play" aria-label="Pause automatic coffee carousel">Pause motion</button><button type="button" class="origin-next" aria-label="Next coffee origin">→</button></div>';
+    '<div class="origin-position" aria-live="polite">01 / 05</div><div class="origin-buttons"><button type="button" class="origin-prev" aria-label="Previous coffee origin">←</button><button type="button" class="origin-next" aria-label="Next coffee origin">→</button></div>';
   track.after(controls);
   const hint = controls.parentElement.querySelector(".origin-hint");
   if (hint)
     hint.textContent = "Explore five Ugandan origins · swipe or use the arrows";
-  const play = controls.querySelector(".origin-play");
-  let paused = reducedMotion.matches,
-    hovered = false,
-    visible = false;
   const current = () =>
     cards.reduce(
       (best, card, i) =>
@@ -139,16 +135,6 @@ document.querySelectorAll(".origin-track").forEach((track) => {
           : best,
       0,
     );
-  function setPaused(value) {
-    paused = value;
-    play.textContent = paused ? "Play motion" : "Pause motion";
-    play.setAttribute(
-      "aria-label",
-      paused
-        ? "Start automatic coffee carousel"
-        : "Pause automatic coffee carousel",
-    );
-  }
   function move(direction) {
     const max = track.scrollWidth - track.clientWidth;
     const step = cards[1].offsetLeft - cards[0].offsetLeft;
@@ -161,28 +147,14 @@ document.querySelectorAll(".origin-track").forEach((track) => {
     });
   }
   controls.querySelector(".origin-prev").addEventListener("click", () => {
-    setPaused(true);
     move(-1);
   });
   controls.querySelector(".origin-next").addEventListener("click", () => {
-    setPaused(true);
     move(1);
   });
-  play.addEventListener("click", () => setPaused(!paused));
-  track.addEventListener("pointerenter", () => {
-    hovered = true;
-  });
-  track.addEventListener("pointerleave", () => {
-    hovered = false;
-  });
-  track.addEventListener("pointerdown", () => setPaused(true), {
-    passive: true,
-  });
-  track.addEventListener("focusin", () => setPaused(true));
   track.addEventListener("keydown", (event) => {
     if (event.key === "ArrowRight" || event.key === "ArrowLeft") {
       event.preventDefault();
-      setPaused(true);
       move(event.key === "ArrowRight" ? 1 : -1);
     }
   });
@@ -194,26 +166,6 @@ document.querySelectorAll(".origin-track").forEach((track) => {
     },
     { passive: true },
   );
-  new IntersectionObserver(
-    (entries) => {
-      visible = entries[0].isIntersecting;
-    },
-    { threshold: 0.35 },
-  ).observe(track);
-  setInterval(() => {
-    if (
-      visible &&
-      !paused &&
-      !hovered &&
-      !document.hidden &&
-      !reducedMotion.matches
-    )
-      move(1);
-  }, 4600);
-  reducedMotion.addEventListener("change", () => {
-    if (reducedMotion.matches) setPaused(true);
-  });
-  setPaused(paused);
 });
 
 const entranceObserver = new IntersectionObserver(

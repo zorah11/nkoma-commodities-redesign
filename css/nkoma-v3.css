@@ -868,6 +868,90 @@ button:focus-visible,
     transform: none !important;
   }
 }
+
+/* Visual origin cards inspired by editorial specialty-coffee profiles. */
+.origin-section {
+  background: #e9e5da;
+}
+.origin-card {
+  flex-basis: 360px;
+  min-height: 500px;
+  padding: 0 1.5rem 1.7rem;
+  overflow: hidden;
+  border-top: 0;
+  background: rgba(255, 253, 248, 0.92);
+  box-shadow: 0 12px 35px rgba(23, 32, 20, 0.08);
+}
+.origin-card::before {
+  content: "";
+  display: block;
+  height: 165px;
+  margin: 0 -1.5rem 1.5rem;
+  background-position: center;
+  background-size: cover;
+  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.origin-card:nth-child(1)::before {
+  background-image:
+    linear-gradient(#20351b24, #20351b24),
+    url("../images/steptodown.com435624-1.jpg");
+}
+.origin-card:nth-child(2)::before {
+  background-image:
+    linear-gradient(#20351b24, #20351b24),
+    url("../images/steptodown.com578983.jpg");
+}
+.origin-card:nth-child(3)::before {
+  background-image:
+    linear-gradient(#20351b24, #20351b24),
+    url("../images/steptodown.com285510-e1739700528642.jpg");
+}
+.origin-card:nth-child(4)::before {
+  background-image:
+    linear-gradient(#20351b24, #20351b24),
+    url("../images/WhatsApp-Image-2025-05-23-at-14.27.21_df2f2b79.jpg");
+}
+.origin-card:nth-child(5)::before {
+  background-image:
+    linear-gradient(#20351b24, #20351b24),
+    url("../images/steptodown.com236864.jpg");
+}
+.origin-card:hover::before {
+  transform: scale(1.035);
+}
+.origin-card h3 {
+  font-size: 2rem;
+}
+.origin-card .section-tag {
+  color: #365d46;
+}
+.origin-controls {
+  border-top-color: rgba(38, 53, 31, 0.25);
+}
+.origin-buttons button {
+  color: #26351f;
+  border-color: #26351f;
+}
+.origin-buttons button:hover {
+  background: #26351f;
+}
+.origin-position {
+  color: #365d46;
+}
+.journey-caption,
+.photo-ribbon figcaption {
+  background: rgba(255, 253, 248, 0.72);
+  color: var(--ink);
+  border: 1px solid rgba(255, 255, 255, 0.54);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 25px rgba(23, 20, 22, 0.12);
+}
+@media (max-width: 580px) {
+  .origin-card {
+    flex-basis: 84vw;
+    min-height: 485px;
+  }
+}
 .reveal.visible {
   opacity: 1;
   transform: none;
@@ -1281,4 +1365,16 @@ button:focus-visible,
   .photo-ribbon img {
     transform: none !important;
   }
+}
+
+.origin-section .origin-position {
+  color: #365d46;
+}
+.origin-section .origin-buttons button {
+  color: #26351f;
+  border-color: #26351f;
+}
+.origin-section .origin-buttons button:hover {
+  color: white;
+  background: #26351f;
 }
