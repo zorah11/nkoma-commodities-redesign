@@ -166,6 +166,23 @@ document.querySelectorAll(".origin-track").forEach((track) => {
     },
     { passive: true },
   );
+
+  // Keep the origins moving without adding another control to the interface.
+  // Motion pauses while someone is reading or interacting with the cards.
+  if (!reducedMotion.matches) {
+    let autoMove = window.setInterval(() => move(1), 2400);
+    const pauseAutoMove = () => window.clearInterval(autoMove);
+    const resumeAutoMove = () => {
+      window.clearInterval(autoMove);
+      autoMove = window.setInterval(() => move(1), 2400);
+    };
+    track.addEventListener("mouseenter", pauseAutoMove);
+    track.addEventListener("mouseleave", resumeAutoMove);
+    track.addEventListener("focusin", pauseAutoMove);
+    track.addEventListener("focusout", resumeAutoMove);
+    track.addEventListener("pointerdown", pauseAutoMove);
+    track.addEventListener("pointerup", resumeAutoMove);
+  }
 });
 
 const entranceObserver = new IntersectionObserver(

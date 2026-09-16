@@ -1387,6 +1387,10 @@ button:focus-visible,
   -webkit-backdrop-filter: blur(18px) saturate(125%);
   backdrop-filter: blur(18px) saturate(125%);
 }
+.site-header {
+  -webkit-backdrop-filter: blur(18px) saturate(125%);
+  backdrop-filter: blur(18px) saturate(125%);
+}
 .inner-page .page-intro {
   position: relative;
   background:
@@ -1611,6 +1615,29 @@ button:focus-visible,
     grid-template-columns: 34px 1fr;
   }
   .values {
+    background-attachment: scroll;
+  }
+}
+
+/* Photographic glass treatment for the moving coffee-origin cards. */
+.coffee-page .origin-section {
+  background:
+    linear-gradient(rgba(232, 228, 217, 0.86), rgba(232, 228, 217, 0.94)),
+    url("../images/steptodown.com236864.jpg") center / cover fixed;
+}
+.coffee-page .origin-card {
+  border: 1px solid rgba(255, 255, 255, 0.58);
+  background: rgba(255, 253, 248, 0.68);
+  -webkit-backdrop-filter: blur(16px) saturate(120%);
+  backdrop-filter: blur(16px) saturate(120%);
+  box-shadow: 0 18px 46px rgba(19, 46, 34, 0.13);
+}
+.coffee-page .origin-card:hover {
+  background: rgba(255, 253, 248, 0.83);
+  box-shadow: 0 24px 56px rgba(19, 46, 34, 0.18);
+}
+@media (max-width: 720px) {
+  .coffee-page .origin-section {
     background-attachment: scroll;
   }
 }
